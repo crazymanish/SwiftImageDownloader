@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ERe-eE-B0p">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--SwiftImageDownloader-->
+        <scene sceneID="PjM-0i-Ff0">
+            <objects>
+                <tableViewController id="Sey-Jy-wZ8" customClass="HomeScreenTableViewController" customModule="ImageDownloader" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="153" sectionHeaderHeight="22" sectionFooterHeight="22" id="2lT-jP-cVi">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="HomeScreenTableViewCell" rowHeight="153" id="dZc-sR-70v" customClass="HomeScreenTableViewCell" customModule="ImageDownloader" customModuleProvider="target">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dZc-sR-70v" id="6YQ-UT-s2K">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="10f-KU-goX" customClass="MR_ImageView" customModule="ImageDownloader" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="1" width="167" height="150"/>
+                                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="167" id="8E1-c1-jDN"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Url" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ReO-hy-xhP">
+                                            <rect key="frame" x="192" y="21" width="388" height="110"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                            <color key="textColor" red="0.064584588002191232" green="0.13368566155311484" blue="0.52755604619999996" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="10f-KU-goX" firstAttribute="top" secondItem="6YQ-UT-s2K" secondAttribute="topMargin" constant="-7" id="LXL-Ix-H1t"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="ReO-hy-xhP" secondAttribute="trailing" constant="12" id="bBV-vc-AaX"/>
+                                        <constraint firstItem="10f-KU-goX" firstAttribute="leading" secondItem="6YQ-UT-s2K" secondAttribute="leading" id="dWc-e9-Bnp"/>
+                                        <constraint firstItem="ReO-hy-xhP" firstAttribute="top" secondItem="6YQ-UT-s2K" secondAttribute="topMargin" constant="13" id="hbg-R4-Hd8"/>
+                                        <constraint firstItem="10f-KU-goX" firstAttribute="centerY" secondItem="6YQ-UT-s2K" secondAttribute="centerY" id="jPd-VR-Zb4"/>
+                                        <constraint firstItem="ReO-hy-xhP" firstAttribute="centerY" secondItem="10f-KU-goX" secondAttribute="centerY" id="k2y-m8-6CA"/>
+                                        <constraint firstItem="ReO-hy-xhP" firstAttribute="leading" secondItem="10f-KU-goX" secondAttribute="trailing" constant="25" id="zfA-gK-LHa"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="imageUrlString" destination="ReO-hy-xhP" id="WS3-om-mGQ"/>
+                                    <outlet property="thumbView" destination="10f-KU-goX" id="84V-Ao-a6g"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Sey-Jy-wZ8" id="2Xf-SD-cO9"/>
+                            <outlet property="delegate" destination="Sey-Jy-wZ8" id="pfs-xf-JZ8"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="SwiftImageDownloader" id="oiM-t5-Pc3"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0c4-Ww-CC4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1372" y="-1008"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="xiQ-ON-24z">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ERe-eE-B0p" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="aQ6-6K-ZF9">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Sey-Jy-wZ8" kind="relationship" relationship="rootViewController" id="xgu-4u-aHO"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kFq-J6-hnn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2165" y="-794"/>
+        </scene>
+    </scenes>
+</document>
